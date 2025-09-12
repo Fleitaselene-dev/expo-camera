@@ -15,12 +15,18 @@ export default function LoginScreen() {
       <TextInput placeholder="Contraseña" placeholderTextColor="#b76fa7" secureTextEntry  value={contrasenia} onChangeText={setContrasenia} style={{ width: 300, backgroundColor: "#fff", borderColor: "#f5c2e7", borderWidth: 1, borderRadius: 10,  padding: 12,  marginBottom: 25, fontSize: 16,  color: "#d63384",
         }}
       />
-
-      <TouchableOpacity onPress={() => router.push("./camera")} style={{backgroundColor: "#f06292",paddingVertical: 12, paddingHorizontal: 30, borderRadius: 20,
+     <View style={{ flexDirection: "row", justifyContent: "center"}}>
+      <TouchableOpacity onPress={() => router.push("/cameraLogin")} style={{backgroundColor: "#f06292",paddingVertical: 12, paddingHorizontal: 16, width:150, borderRadius: 20,height:50,
         }}
       >
-        <Text style={{ color: "#fff", fontWeight: "bold", fontSize: 16 }}> Ingresar</Text>
+        <Text style={{ color: "#fff", fontWeight: "bold", fontSize: 12 }}> Ingresar con Rostro</Text>
       </TouchableOpacity>
+         <TouchableOpacity onPress={() => router.push("/cameraRegister")} style={{backgroundColor: "#fff" ,paddingVertical: 12, paddingHorizontal: 16, borderRadius: 20,width:150, height:50,
+        }}
+      >
+        <Text style={{ color: "#f06292", fontWeight: "bold", fontSize: 12 }}>Registrar Rostro</Text>
+      </TouchableOpacity>
+    </View>
     </View>
   );
 }
